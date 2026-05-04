@@ -1,0 +1,38 @@
+# Lab Week 05 Wed/Thurs
+
+This lab, you'll be setting up the RGB TFT Screen.
+
+### Required Compoenents
+1. 1x FPGA (either ICESugar or ICESugar-pro)
+1. 1x RGB Screen
+2. 1x Ribbon-cable to PMOD Adapter
+
+### Wiring
+You will be using one of the 30-pin PMOD connectors to hook up the RGB LCD to your FPGA. We recommend using P6.
+
+Don't forget to use the ribbon-cable to PMOD adapter.
+
+## System Description
+```verilog
+module top
+(
+  input  CLK, //FPGA's clocck
+
+	output LCD_CLK,//LCD clock. 
+	output LCD_DEN,
+	output [4:0] LCD_R,
+	output [5:0] LCD_G,
+	output [4:0] LCD_B,
+);
+
+```
+
+You will be displaying three colors on the RGB screen. 1/3 of the screen should be red. Another 1/3 of the screen should be blue, and the another 1/3 should be green.
+
+Reference BACKGROUND.md for an explanation on how the RGB Screen works.
+
+
+## Demo
+![RGB](https://github.com/UCR-CS122A/lab-week05-WedThurs/blob/main/IMG_1525.JPG)
+
+>Please note that this particular image shows 6 distinct colors. We don't need to see 6, just Red Green and Blue bars.
